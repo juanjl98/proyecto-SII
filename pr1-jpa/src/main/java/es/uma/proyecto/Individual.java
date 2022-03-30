@@ -1,9 +1,7 @@
 package es.uma.proyecto;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Entity implementation class for Entity: Artist
@@ -15,7 +13,6 @@ public class Individual extends Cliente {
     private String nombre;
     private String apellidos;
     private Date fechaNacimiento;
-
     //Constructor
     public Individual() {
         super();

@@ -1,9 +1,7 @@
 package es.uma.proyecto;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Entity implementation class for Entity: Artist
@@ -13,6 +11,11 @@ import java.util.Date;
 @DiscriminatorValue("E")
 public class Empresa extends Cliente {
     private String razonSocial;
+    @ManyToMany
+    @JoinTable(name = "Autorizacion",
+            joinColumns = @JoinColumn(name = "id_cliente"),
+            inverseJoinColumns = @JoinColumn(name = "id_autorizacion"))
+    private List<Persona_Autorizada> autorizaciones;
 
     //Constructor
     public Empresa() {

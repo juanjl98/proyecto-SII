@@ -4,6 +4,7 @@
 		<class>es.uma.proyecto.Individual</class>
 		<class>es.uma.proyecto.Cliente</class>
 		<class>es.uma.proyecto.Empresa</class>
+		<class>es.uma.proyecto.Persona_Autorizada</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
 			<property name="javax.persistence.jdbc.user" value=""/>

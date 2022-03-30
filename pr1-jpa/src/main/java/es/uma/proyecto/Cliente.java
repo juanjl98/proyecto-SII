@@ -1,8 +1,7 @@
 package es.uma.proyecto;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Entity implementation class for Entity: Artist
