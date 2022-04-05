@@ -1,5 +1,7 @@
 package es.uma.proyecto;
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +24,8 @@ public class Cliente {
     private String ciudad;
     private String direccion;
     private String codigo_postal;
+    @OneToMany(fetch = FetchType.LAZY)
+    private ArrayList<Cuenta_fintech> cuentas_fintechs;
 
     public Cliente() {}
     public Cliente(String Identificacion, String tipo_cliente, String estado, Date fecha_alta, Date fecha_baja, String pais, String ciudad, String direccion, String codigo_postal){
@@ -94,6 +98,13 @@ public class Cliente {
     }
     public void setCodigo_postal(String codigo_postal){
         this.codigo_postal = codigo_postal;
+    }
+
+    public ArrayList<Cuenta_fintech> getCuentas_fintechs() {
+        return cuentas_fintechs;
+    }
+    public void setCuentas_fintechs(ArrayList<Cuenta_fintech> cuentas_fintechs) {
+        this.cuentas_fintechs = cuentas_fintechs;
     }
     //Equals y hashCode
     @Override
