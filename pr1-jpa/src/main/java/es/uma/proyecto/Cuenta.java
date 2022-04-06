@@ -12,6 +12,7 @@ public class Cuenta {
     @Id
     private String iban;
     private String swift;
+
     @OneToMany(fetch = FetchType.LAZY)
     private ArrayList<Transaccion> transacciones;
     @OneToMany(fetch = FetchType.LAZY)
