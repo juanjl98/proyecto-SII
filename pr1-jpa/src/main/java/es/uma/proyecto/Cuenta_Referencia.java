@@ -2,26 +2,26 @@ package es.uma.proyecto;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Cuenta_Referida{
+public class Cuenta_Referencia  extends Cuenta{
     private String nombreBanco;
     private String sucursal;
     private String pais;
     private Float saldo;
     private Date fecha_apertura;
     private String estado;
-    @OneToMany(fetch = FetchType.LAZY)
-    private ArrayList<Depositada_en> dep_en;
+
+    @OneToMany(mappedBy = "cuenta_referencia")
+    private List<CuentaPoolCuentaReferencia> cuentas_pool_asociadas;
     
-    public Cuenta_Referida(){
 
-    }
-
+//Getters y setters
     public String getNombreBanco() {
         return nombreBanco;
     }
@@ -70,13 +70,10 @@ public class Cuenta_Referida{
         this.estado = estado;
     }
 
-    public ArrayList<Depositada_en> getDep_en() {
-        return dep_en;
+    public List<CuentaPoolCuentaReferencia> getCuentas_pool_asociadas() {
+        return cuentas_pool_asociadas;
     }
 
-    public void setDep_en(ArrayList<Depositada_en> dep_en) {
-        this.dep_en = dep_en;
-    }
   
 
 }
