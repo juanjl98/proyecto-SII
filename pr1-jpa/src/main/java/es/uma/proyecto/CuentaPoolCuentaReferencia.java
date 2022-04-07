@@ -11,12 +11,12 @@ public class CuentaPoolCuentaReferencia {
     @ManyToOne
     @MapsId("cuentaPool_id")
     @JoinColumn(name = "cuentaPool_id")
-    Pooled_Account cuentaPool;
+    Pooled_Account pooled_account;
 
     @ManyToOne
     @MapsId("cuentaRef_id")
     @JoinColumn(name = "cuentaRef_id")
-    Cuenta_Referencia cuentaRef;
+    Cuenta_Referencia cuenta_referencia;
 
     Double saldo;
 
