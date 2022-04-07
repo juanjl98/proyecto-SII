@@ -22,6 +22,7 @@ public class Persona_Autorizada{
     private String estado;
     private String fecha_inicio;
     private String fecha_fin;
+    private boolean bloqueado = false;
 
     //Constructor
     public Persona_Autorizada() {

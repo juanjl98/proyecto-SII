@@ -24,21 +24,12 @@ public class Cliente {
     private String ciudad;
     private String direccion;
     private String codigo_postal;
+    private boolean bloqueado = false;
     @OneToMany(fetch = FetchType.LAZY)
     private ArrayList<Cuenta_fintech> cuentas_fintechs;
 
     public Cliente() {}
-    public Cliente(String Identificacion, String tipo_cliente, String estado, Date fecha_alta, Date fecha_baja, String pais, String ciudad, String direccion, String codigo_postal){
-        this.Identificacion = Identificacion;
-        this.tipo_cliente = tipo_cliente;
-        this.estado = estado;
-        this.fecha_alta = fecha_alta;
-        this.fecha_baja = fecha_baja;
-        this.pais = pais;
-        this.ciudad = ciudad;
-        this.direccion = direccion;
-        this.codigo_postal = codigo_postal;
-    }
+
     public long getId(){
         return id;
     }
