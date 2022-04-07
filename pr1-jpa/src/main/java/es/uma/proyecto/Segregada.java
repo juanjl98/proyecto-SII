@@ -5,10 +5,10 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Segregada {
+public class Segregada extends Cuenta_fintech{
     private Float comision;
     @OneToOne(fetch = FetchType.LAZY)
-    private Cuenta_Referida cRef;
+    private Cuenta_Referencia cRef;
 
     public Segregada(){
 
@@ -22,11 +22,11 @@ public class Segregada {
         return this.comision;
     }
 
-    public Cuenta_Referida getcRef() {
+    public Cuenta_Referencia getcRef() {
         return cRef;
     }
 
-    public void setcRef(Cuenta_Referida cRef) {
+    public void setcRef(Cuenta_Referencia cRef) {
         this.cRef = cRef;
     }
 
