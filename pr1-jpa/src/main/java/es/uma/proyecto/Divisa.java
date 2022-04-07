@@ -63,11 +63,11 @@ public class Divisa {
         this.transacciones = transacciones;
     }
 
-    public ArrayList<Cuenta_Referida> getCuentas_referidas() {
+    public ArrayList<Cuenta_Referencia> getCuentas_referidas() {
         return cuentas_referidas;
     }
 
-    public void setCuentas_referidas(ArrayList<Cuenta_Referida> cuentas_referidas) {
+    public void setCuentas_referidas(ArrayList<Cuenta_Referencia> cuentas_referidas) {
         this.cuentas_referidas = cuentas_referidas;
     }
 
