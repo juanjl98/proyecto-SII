@@ -18,7 +18,7 @@ public class Divisa {
     @OneToMany(fetch = FetchType.LAZY)
     private ArrayList<Transaccion> transacciones;
     @OneToMany(fetch = FetchType.LAZY)
-    private ArrayList<Cuenta_Referida> cuentas_referidas;
+    private ArrayList<Cuenta_Referencia> cuentas_referidas;
     
     public Divisa() {
     }
