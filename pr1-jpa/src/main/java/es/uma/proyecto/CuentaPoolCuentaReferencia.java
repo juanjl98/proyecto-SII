@@ -19,4 +19,16 @@ public class CuentaPoolCuentaReferencia {
 
     @Column(name = "saldo")
     private int saldo;
+
+    @ManyToOne
+    @JoinColumn(name = "pooled_account_iban")
+    private Pooled_Account pooled_Account;
+
+    public Pooled_Account getPooled_Account() {
+        return pooled_Account;
+    }
+
+    public void setPooled_Account(Pooled_Account pooled_Account) {
+        this.pooled_Account = pooled_Account;
+    }
 }
