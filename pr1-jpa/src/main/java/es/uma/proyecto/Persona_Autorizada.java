@@ -84,4 +84,24 @@ public class Persona_Autorizada{
         this.fecha_fin = fecha_fin;
     }
 
+    //ToString and hashCode
+    @Override
+    public String toString() {
+        return "Persona_Autorizada [id=" + id + ", identificacion=" + identificacion + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", fecha_nacimiento=" + fecha_nacimiento + ", estado=" + estado + ", fecha_inicio=" + fecha_inicio + ", fecha_fin=" + fecha_fin + "]";
+    }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
+        result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
+        result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+        result = prime * result + ((fecha_fin == null) ? 0 : fecha_fin.hashCode());
+        result = prime * result + ((fecha_inicio == null) ? 0 : fecha_inicio.hashCode());
+        result = prime * result + ((fecha_nacimiento == null) ? 0 : fecha_nacimiento.hashCode());
+        result = prime * result + ((identificacion == null) ? 0 : identificacion.hashCode());
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+        return result;
+    }
 }
