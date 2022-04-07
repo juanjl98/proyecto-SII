@@ -18,7 +18,7 @@ public class Cuenta_Referencia  extends Cuenta{
     private String estado;
 
     @OneToMany(mappedBy = "cuenta_referencia")
-    private List<CuentaPoolCuentaReferencia> cuentas_pool_asociadas;
+    private List<Pooled_Account> cuentas_pool_asociadas;
     
 
 //Getters y setters
@@ -70,7 +70,7 @@ public class Cuenta_Referencia  extends Cuenta{
         this.estado = estado;
     }
 
-    public List<CuentaPoolCuentaReferencia> getCuentas_pool_asociadas() {
+    public List<Pooled_Account> getCuentas_pool_asociadas() {
         return cuentas_pool_asociadas;
     }
 

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="pr1" transaction-type="RESOURCE_LOCAL">
-		<class>es.uma.proyecto.Individual</class>
 		<class>es.uma.proyecto.Cliente</class>
-		<class>es.uma.proyecto.Empresa</class>
-		<class>es.uma.proyecto.Persona_Autorizada</class>
+		<class>es.uma.proyecto.Cuenta_fintech</class>
 		<class>es.uma.proyecto.Cuenta</class>
-        <class>es.uma.proyecto.CuentaPoolCuentaReferenciaId</class>
+		<class>es.uma.proyecto.Divisa</class>
+		<class>es.uma.proyecto.Empresa</class>
+		<class>es.uma.proyecto.Individual</class>
+		<class>es.uma.proyecto.Movimiento</class>
+		<class>es.uma.proyecto.Persona_Autorizada</class>
 		<class>es.uma.proyecto.Pooled_Account</class>
 		<class>es.uma.proyecto.Segregada</class>
-		<class>es.uma.proyecto.Transaccion</class>
 		<class>es.uma.proyecto.Tarjeta</class>
-		<class>es.uma.proyecto.Movimiento</class>
-		<class>es.uma.proyecto.Divisa</class>
-		<class>es.uma.proyecto.Depositada_en</class>
-		<class>es.uma.proyecto.Cuenta_Referencia</class>
-		<class>es.uma.proyecto.Cuenta_fintech</class>
+		<class>es.uma.proyecto.Transaccion</class>
+		<class>es.uma.proyecto.Main</class>
+
 
         <properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test"/>
@@ -23,7 +22,7 @@
 			<property name="javax.persistence.jdbc.password" value=""/>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
 			<property name="javax.persistence.schema-generation.scripts.action" value="create"/>
-			<property name="javax.persistence.schema-generation.scripts.create-target" value="esquema.ddl"/>
+			<property name="javax.persistence.schema-generation.scripts.create-target" value="esquema_Trabajo.ddl"/>
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 		</properties>
 	</persistence-unit>
