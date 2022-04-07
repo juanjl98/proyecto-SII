@@ -14,6 +14,7 @@
 		<class>es.uma.proyecto.Tarjeta</class>
 		<class>es.uma.proyecto.Transaccion</class>
 		<class>es.uma.proyecto.Main</class>
+		<class>es.uma.proyecto.Cuenta_Referencia</class>
 
 
         <properties>
