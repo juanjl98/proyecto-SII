@@ -71,4 +71,20 @@ public class Divisa {
         this.cuentas_referidas = cuentas_referidas;
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((abreviatura == null) ? 0 : abreviatura.hashCode());
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Divisa [abreviatura=" + abreviatura + ", cambioEuro=" + cambioEuro + ", cuentas_referidas="
+                + cuentas_referidas + ", nombre=" + nombre + ", simbolo=" + simbolo + ", transacciones=" + transacciones
+                + "]";
+    }
+
+    
 }
