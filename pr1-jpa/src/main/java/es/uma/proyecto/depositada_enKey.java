@@ -5,7 +5,7 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-class cuentaPoolcuentaRefKey implements Serializable {
+class depositada_enKey implements Serializable {
 
     @Column(name = "cuentaPool_id")
     String cuentaPool_id;

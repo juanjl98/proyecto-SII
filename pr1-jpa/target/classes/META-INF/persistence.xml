@@ -15,8 +15,8 @@
 		<class>es.uma.proyecto.Transaccion</class>
 		<class>es.uma.proyecto.Main</class>
 		<class>es.uma.proyecto.Cuenta_Referencia</class>
-		<class>es.uma.proyecto.CuentaPoolCuentaReferencia</class>
-		<class>es.uma.proyecto.cuentaPoolcuentaRefKey</class>
+		<class>es.uma.proyecto.deposita_en</class>
+		<class>es.uma.proyecto.depositada_enKey</class>
 
 
         <properties>

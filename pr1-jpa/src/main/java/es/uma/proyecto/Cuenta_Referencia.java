@@ -1,11 +1,9 @@
 package es.uma.proyecto;
 
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -18,7 +16,7 @@ public class Cuenta_Referencia  extends Cuenta{
     private String estado;
 
     @OneToMany(mappedBy = "cuenta_referencia")
-    private List<CuentaPoolCuentaReferencia> cuentas_pool_asociadas;
+    private List<deposita_en> cuentas_pool_asociadas;
     
 
 //Getters y setters
@@ -70,7 +68,7 @@ public class Cuenta_Referencia  extends Cuenta{
         this.estado = estado;
     }
 
-    public List<CuentaPoolCuentaReferencia> getCuentas_pool_asociadas() {
+    public List<deposita_en> getCuentas_pool_asociadas() {
         return cuentas_pool_asociadas;
     }
 

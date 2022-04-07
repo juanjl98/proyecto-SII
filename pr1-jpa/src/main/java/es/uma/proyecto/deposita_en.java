@@ -3,10 +3,10 @@ package es.uma.proyecto;
 import javax.persistence.*;
 
 @Entity
-public class CuentaPoolCuentaReferencia {
+public class deposita_en {
 
     @EmbeddedId
-    cuentaPoolcuentaRefKey id;
+    depositada_enKey id;
 
     @ManyToOne
     @MapsId("cuentaPool_id")
