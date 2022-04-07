@@ -10,22 +10,26 @@ import javax.persistence.OneToMany;
 @Entity
 public class Pooled_Account extends Cuenta_fintech {
 
-    @OneToMany(mappedBy = "cuenta_pool")
+    @OneToMany(mappedBy = "pooled_account", fetch = FetchType.EAGER)
     private List<CuentaPoolCuentaReferencia> cuentas_referenciasAsociadas;
 
-    private ArrayList<Depositada_en> dep_en;
 
     public Pooled_Account(){
 
     }
-
-    public ArrayList<Depositada_en> getDep_en() {
-        return dep_en;
+    //getter y settes
+    public List<CuentaPoolCuentaReferencia> getCuentas_referenciasAsociadas() {
+        return cuentas_referenciasAsociadas;
     }
 
-    public void setDep_en(ArrayList<Depositada_en> dep_en) {
-        this.dep_en = dep_en;
+    public void setCuentas_referenciasAsociadas(List<CuentaPoolCuentaReferencia> cuentas_referenciasAsociadas) {
+        this.cuentas_referenciasAsociadas = cuentas_referenciasAsociadas;
     }
 
-    
+    public void addCuenta_referenciaAsociada(CuentaPoolCuentaReferencia cuenta_referenciaAsociada) {
+        if(this.cuentas_referenciasAsociadas == null) {
+            this.cuentas_referenciasAsociadas = new ArrayList<>();
+        }
+        this.cuentas_referenciasAsociadas.add(cuenta_referenciaAsociada);
+    }
 }

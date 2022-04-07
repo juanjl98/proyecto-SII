@@ -9,12 +9,12 @@ public class CuentaPoolCuentaReferencia {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "employer_id", referencedColumnName = "id")
-    private Pooled_Account cuentaPool;
+    @JoinColumn(name = "pooled_account_id", referencedColumnName = "id")
+    private Pooled_Account pooled_account;
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "delivery_agent_id", referencedColumnName = "id")
+    @JoinColumn(name = "cuenta_referencia_id", referencedColumnName = "id")
     private Cuenta_Referencia cuenta_referencia;
 
     @Column(name = "saldo")
